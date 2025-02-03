@@ -1,0 +1,78 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8d7e4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+  }
+  
+  h1 {
+    color: #ff4b6d;
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .yes {
+    background-color: #ff8e8e;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .no {
+    background-color: #ff4b6d;
+    color: white;
+    font-weight: bold;
+    position: relative;
+  }
+  
+  .yes img, .no img {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .no.move {
+    position: absolute;
+    top: calc(50% - 20px);
+    left: calc(50% - 80px);
+  }
+  
+  .no:hover {
+    animation: moveNo 1s ease-in-out infinite;
+  }
+  
+  @keyframes moveNo {
+    0% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(50px, -30px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+  
